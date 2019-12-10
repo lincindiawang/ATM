@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 logon = true;
             }
         }
-//        super.onActivityResult(requestCode, resultCode, data);
+
     }
 
     @Override
