@@ -1,6 +1,7 @@
 package com.linda.atm;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -14,16 +15,22 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
-    private static final int REQUEST_CODE_LOGIN = 110;
+    private static final int REQUEST_CODE_LOGIN = 21;
     boolean logon = false;
+    private PokerCard card;
+    Random random = new Random();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        card = findViewById(R.id.card);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
